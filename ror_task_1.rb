@@ -6,7 +6,7 @@ class RorTask1
   #количество вхождений числа 3 в разложение заданного числа на простые сомножители.
   def how_many_threes num
     #код писать сюда
-    num.prime_division.each{|arr| p arr[1] if arr.include?(3)}
+    num.prime_division.each{|arr| p arr[1] if arr[0] == 3}
   end
 
   #Дан текст. Определите максимальное из имеющихся в нем чисел.
