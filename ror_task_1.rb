@@ -6,12 +6,15 @@ class RorTask1
   #количество вхождений числа 3 в разложение заданного числа на простые сомножители.
   def how_many_threes num
     #код писать сюда
-    num.prime_division.each{|arr| p arr[1] if arr[0] == 3}
+    res = 0
+    num.prime_division.each{|arr| res = arr[1] if arr[0] == 3}
+    res
   end
 
   #Дан текст. Определите максимальное из имеющихся в нем чисел.
   def max_number_in_text text
     #код писать сюда
+    arr = tex.split
     arr.find_all{|el| Float(el) != nil rescue false}.max{|a,b| a.to_f <=> b.to_f}
   end
 
@@ -19,7 +22,7 @@ class RorTask1
   #индексами, а затем - с нечетными.
   def even_odd_elements arr
     #код писать сюда
-    arr.partition{|item| arr.find_index(item).odd?}
+    arr.partition.each_with_index{|el, i| i.odd?}
   end
 
   #Дан целочисленный массив. Преобразовать его, прибавив к нечетным числам последний 
